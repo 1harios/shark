@@ -8,7 +8,7 @@ import { randomInt } from 'crypto';
 // import { serveStatic } from 'frog/serve-static';
 
 const baseUrl = "https://warpcast.com/~/compose";
-const text = "Find out whatkind of shark you are 🦈\n\n▶️ Press start.\n\nJoin the Shark Mafia community - /shark\n\n✏️ Frame by @harios";
+const text = "Find out whatkind of shark you are 🦈\n\n▶️ Press start.\n\nJoin the Shark Mafia community - /sharks\n\n✏️ Frame by @harios";
 const embedUrl = "https://sharks-by-harios.vercel.app/api/frame";
 
 const BROWSER_LOCATION = `${baseUrl}?text=${encodeURIComponent(text)}&embeds[]=${encodeURIComponent(embedUrl)}`;
@@ -62,7 +62,7 @@ app.frame('/button-pressed', (c) => {
   const selectedImage = images[randomIndex];
 
   const baseUrl = "https://warpcast.com/~/compose";
-  const text = "Find out whatkind of shark you are 🦈\n\n▶️ Press start.\n\nJoin the Shark Mafia community - /shark\n\n✏️ Frame by @harios";
+  const text = "Find out whatkind of shark you are 🦈\n\n▶️ Press start.\n\nJoin the Shark Mafia community - /sharks\n\n✏️ Frame by @harios";
   const embedUrlByUser = `https://sharks-by-harios.vercel.app/api/frame/shared/${selectedImage.id}`;
 
   const SHARE_BY_USER = `${baseUrl}?text=${encodeURIComponent(text)}&embeds[]=${encodeURIComponent(embedUrlByUser)}`;
